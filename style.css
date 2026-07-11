@@ -1,0 +1,131 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+.container{
+    position: absolute;
+    height:100%;
+    width:100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.taskBody{
+    position:inherit;
+    width:95%;
+    background-color:rgb(236, 236, 236);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+hr{
+    width:97%;
+    border:1px solid rgb(216, 216, 216);
+    box-shadow:0px 0px 10px rgb(163, 163, 163);
+    padding-bottom:3px;
+}
+.taskBody header{
+    width:98%;
+    background:linear-gradient(to right , rgb(148, 148, 255),rgb(206, 61, 235),rgb(235, 54, 54),rgb(148, 148, 255));
+    text-align: center;
+    color:white;
+    border-radius:9px;
+    padding-bottom: 4px;
+    animation:glowing 20s linear infinite;
+    background-size: 400% 100%;
+    border:2px solid rgb(255, 255, 255);
+}
+.taskBody .features{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    gap:7px;
+    padding:20px;
+}
+.taskBody .features .task{
+    width:400px;
+    border:1px solid rgb(185, 185, 185);
+    border-radius:4px;
+    height:30px;
+    padding-left:4px;
+}
+.taskBody .features .task:focus{
+    border-radius:6vh;
+    padding-left:5px;
+    border:none;
+}
+.taskBody .features .priority-group{
+    width:300px;
+    font-size:16px;
+    padding:4px;
+    border-radius:4px;
+    text-align: center;
+    border:1px solid rgb(185, 185, 185);
+}
+.taskBody .features .priority-group input{
+    margin-left:4px;
+}
+.taskBody .features #addBtn{
+    width:120px;
+    height:30px;
+    border:none;
+    border-radius:5px;
+    background:linear-gradient(to right , rgb(148, 148, 255),rgb(235, 61, 206),rgb(126, 246, 194),rgb(148, 148, 255));
+    color:white;
+    animation:glowing 20s linear infinite;
+    background-size:400% 100%;
+    cursor:pointer;
+}
+.taskBody .taskList{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:4px;
+    justify-content: center;
+    padding:4px;
+}
+.taskBody .taskList li{
+    width:90%;
+    display:flex;
+    border:1px solid rgb(185, 185, 185);
+    justify-content: space-evenly;
+    align-items:center;
+    height:34px;
+    border-radius:4px;
+}
+.taskBody .taskList li button{
+    width:42px;
+    height:24px;
+}
+.taskBody .analyseHeading{
+    text-align: center;
+    padding:4px;
+}
+.taskBody analysis{
+    width:90%;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    padding:10px;
+}
+.taskBody analysis div{
+    height:40px;
+    text-align: center;
+}
+@keyframes glowing {
+    0%{
+        background-position:0% 0%;
+    }
+    50%{
+        background-position:400% 0%;
+    }
+    100%{
+        background-position:0% 0%;
+    }
+}
